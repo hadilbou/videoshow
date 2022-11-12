@@ -1,7 +1,7 @@
 package package1;
 import java.awt.Graphics;
 
-public class visage implements IObjetDessinable {
+public class visage implements IObjetAnimable {
 	 // ---------------------------------------------------------
     // Les constantes de la classe Visage
     // ---------------------------------------------------------
@@ -204,7 +204,7 @@ public class visage implements IObjetDessinable {
      * élémentaire défini par dx et dy. Si le visage dépasse de l'un des bords
      * de la zone de dessin il inverse sa direction de déplacement.
      */
-    
+     @Override
 	public void deplacer() {
         if (bordGaucheAtteint() || bordDroitAtteint()) {
             inverserDx();
