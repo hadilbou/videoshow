@@ -11,7 +11,7 @@ public class Dessin extends JPanel{
 	/**
      * stocke la liste des trains ajout�es à cette zone de dessin.
      */
-    private final List<TrainCercle> listeTrain = new CopyOnWriteArrayList();
+    private final List<IObjetDessinable> objetdes = new CopyOnWriteArrayList();
 
     /**
      * retourne la largeur de la zone de dessin.
@@ -39,10 +39,10 @@ public class Dessin extends JPanel{
      */
     public void ajouterObjet(TrainCercle t) {
 
-        if (!listeTrain.contains(t)) {
+        if (!objetdes.contains(t)) {
             // l'objet n'est pas déjà dans la liste
             // on le rajoute a la liste des objets du dessin
-        	listeTrain.add(t);
+        	objetdes.add(t);
             // le dessin se réaffiche
             repaint();
             this.pause(10);
