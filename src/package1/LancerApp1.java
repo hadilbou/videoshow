@@ -37,11 +37,23 @@ public class LancerApp1 {
 		}
 		visage v= new visage(d);
 		d.ajouterObjet(v);
-        Forme f1 = new Etoile(350, 100, 50, 8.f, Color.RED, Color.YELLOW);
-        Forme f2= new PolygoneRegulier(5,240,40,40,4.0f,Color.DARK_GRAY,null);
-        d.ajouterObjet(f1);
+       
+        Forme f2= new PolygoneRegulier(5,240,40,40,4.0f,Color.DARK_GRAY,Color.BLACK);
+       
         d.ajouterObjet(f2);
-        
+        visage v2= new visage(d);
+		d.ajouterObjet(v2);
+		 Forme f3= new Etoile(150, 150, 50, 8.f, Color.GREEN, Color.GREEN);
+		 d.ajouterObjet(f3);
+		 MvtCirculaire m1=new MvtCirculaire(100, 150, 150, 10, 6.2);
+		 Forme f= new Etoile(150, 150, 50, 8.f, Color.yellow, Color.yellow);
+		 AnimationForme k= new AnimationForme(f,m1);
+		 d.ajouterObjet(k);
+		 MvtCirculaire m2=new MvtCirculaire(200, 300, 150, 5, 2.2);
+		 Forme f1= new PolygoneRegulier(5,240,40,40,4.0f,Color.GRAY,Color.GRAY);
+		 AnimationForme k1= new AnimationForme(f1,m2);
+		 d.ajouterObjet(k1);
+		 
 		while(true) {
 		// la zone de dessin se réaffiche
 		d.repaint();
