@@ -1,7 +1,8 @@
 package package1;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 
-public class visage implements IObjetAnimable {
+public class visage extends Forme  {
 	 // ---------------------------------------------------------
     // Les constantes de la classe Visage
     // ---------------------------------------------------------
@@ -205,7 +206,7 @@ public class visage implements IObjetAnimable {
      * de la zone de dessin il inverse sa direction de déplacement.
      */
      @Override
-	public void deplacer() {
+	/**public void deplacer() {
         if (bordGaucheAtteint() || bordDroitAtteint()) {
             inverserDx();
         }
@@ -214,7 +215,6 @@ public class visage implements IObjetAnimable {
         }
         deplacerSansRebond();
     }
-
     /**
      * Evalue si le visage atteint le bord gauche de la zône de dessin.
      *
@@ -222,7 +222,7 @@ public class visage implements IObjetAnimable {
      * le coté gauche de la zône de dessin, <code>
      *         false</code> sinon.
      */
-    public boolean bordGaucheAtteint() {
+   /** public boolean bordGaucheAtteint() {
         return (xhg < 0);
     }
 
@@ -233,7 +233,7 @@ public class visage implements IObjetAnimable {
      * le coté droit de la zône de dessin, <code>
      *         false</code> sinon.
      */
-    public boolean bordDroitAtteint() {
+  /**  public boolean bordDroitAtteint() {
         return ((xhg + largeur) > d.getLargeur());
     }
 
@@ -244,7 +244,7 @@ public class visage implements IObjetAnimable {
      * le coté haut de la zône de dessin, <code>
      *         false</code> sinon.
      */
-    public boolean bordHautAtteint() {
+    /**public boolean bordHautAtteint() {
         return (yhg < 0);
     }
 
@@ -255,7 +255,7 @@ public class visage implements IObjetAnimable {
      * le coté bas de la zône de dessin, <code>
      *         false</code> sinon.
      */
-    public boolean bordBasAtteint() {
+    /**public boolean bordBasAtteint() {
         return ((yhg + hauteur) >= d.getHauteur());
     }
 
@@ -266,7 +266,7 @@ public class visage implements IObjetAnimable {
      * l'un des cotés de la zône de dessin, <code>
      *         false</code> sinon.
      */
-    public boolean bordAtteint() {
+   /** public boolean bordAtteint() {
         return bordDroitAtteint() || bordGaucheAtteint() || bordHautAtteint()
                 || bordBasAtteint();
     }
